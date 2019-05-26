@@ -32,7 +32,8 @@ nav #selecionado{
 }
 
 #principal{
-    width: 960px;
+    /*width: 960px;*/
+    width: 75%;
     margin: auto;
     padding: auto;
 }
