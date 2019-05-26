@@ -55,6 +55,7 @@ footer span:hover{
 /*S O B R E*/
 
 section.part1, section.part2{
+    text-indent: 35px;
     width: 50%;
     float: left;
 }
@@ -63,6 +64,7 @@ section.part1 h3{
     margin: 20px 0;
 }
 section.part1 p{
+    text-align: justify;
     float: right;
     color: white;
     margin: 0 10px auto auto;
