@@ -67,7 +67,7 @@ section.part1 p{
     text-align: justify;
     float: right;
     color: white;
-    margin: 0 10px auto auto;
+    margin: 0 30px auto auto;
 }
 
 section.part2 img{
@@ -89,4 +89,17 @@ section.part2 img{
     -webkit-transform: scale(1.1);
     transform: scale(1.1);
     filter: brightness(100%);
+}
+
+/* T R A B A L H O S */
+
+div#imagens{
+    margin: 40px auto auto auto;
+}
+div#imagens img{
+    width: 330px;
+    border: 2.5px;
+}
+div#imagens img:hover{
+    cursor: pointer;
 }
