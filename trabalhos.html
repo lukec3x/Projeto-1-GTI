@@ -26,12 +26,12 @@
     </header>
     <div id="principal">
         <div id="imagens">
-            <a id="img"><img id="img1" src="img/img_trabalhos_001.jpg" alt=""></a>
+            <img id="img1" src="img/img_trabalhos_001.jpg" alt="">
             <img id="img2" src="img/img_trabalhos_002.jpg" alt="">
             <img id="img3" src="img/img_trabalhos_003.jpg" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
+            <img id="img4" src="img/noimage.png" alt="">
+            <img id="img5" src="img/noimage.png" alt="">
+            <img id="img6" src="img/noimage.png" alt="">
             <img src="img/noimage.png" alt="">
             <img src="img/noimage.png" alt="">
             <img src="img/noimage.png" alt="">
@@ -55,21 +55,24 @@
         <br><br>
         <span>&copy; Dualiri</span>
         <script>
-            document.querySelector('#img1').addEventListener('click', clique)
-            document.querySelector('#img2').addEventListener('click', clique)
-            document.querySelector('#img3').addEventListener('click', clique)
+            for(var i = 1; i <= 6; i++) {
+                document.querySelector(`#img${i}`).addEventListener('click', clique)
+            }
 
             var slide = document.querySelector('#slide')
             function clique(){
-                document.querySelector('body').style.filter = 'brightness(50%)'
+                //document.querySelector('body').style.filter = 'brightness(50%)'
+                //slide.style.filter = "brightnees(100%)"
+                slide.style.width = window.innerWidth
                 slide.style.display = "block"
-                slide.style.filter = "brightnees(100%)"
             }
 
             document.querySelector('a#fechar').addEventListener('click', fechar)
             function fechar(){
                 slide.style.display = "none"
             }
+
+            console.log(`${window.innerWidth} e ${window.innerHeight}`)
         </script>
     </footer>
 </body>
