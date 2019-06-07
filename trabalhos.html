@@ -8,6 +8,10 @@
     <link rel="icon" href="img/icon.png">
 </head>
 <body>
+    <div id="slide">
+        <a id="fechar" href="">X</a>
+        <img src="" alt="">
+    </div>
     <header>
         <div id="logo">
             <a href="index.html">
@@ -22,9 +26,9 @@
     </header>
     <div id="principal">
         <div id="imagens">
-            <img src="img/img_trabalhos_001.jpg" alt="">
-            <img src="img/img_trabalhos_002.jpg" alt="">
-            <img src="img/noimage.png" alt="">
+            <a id="img"><img id="img1" src="img/img_trabalhos_001.jpg" alt=""></a>
+            <img id="img2" src="img/img_trabalhos_002.jpg" alt="">
+            <img id="img3" src="img/img_trabalhos_003.jpg" alt="">
             <img src="img/noimage.png" alt="">
             <img src="img/noimage.png" alt="">
             <img src="img/noimage.png" alt="">
@@ -50,6 +54,23 @@
     <footer>
         <br><br>
         <span>&copy; Dualiri</span>
+        <script>
+            document.querySelector('#img1').addEventListener('click', clique)
+            document.querySelector('#img2').addEventListener('click', clique)
+            document.querySelector('#img3').addEventListener('click', clique)
+
+            var slide = document.querySelector('#slide')
+            function clique(){
+                document.querySelector('body').style.filter = 'brightness(50%)'
+                slide.style.display = "block"
+                slide.style.filter = "brightnees(100%)"
+            }
+
+            document.querySelector('a#fechar').addEventListener('click', fechar)
+            function fechar(){
+                slide.style.display = "none"
+            }
+        </script>
     </footer>
 </body>
 </html>

@@ -97,9 +97,22 @@ div#imagens{
     margin: 40px auto auto auto;
 }
 div#imagens img{
+    /*float: left; -- Não pretendo ativar, por enquanto -- */
     width: 330px;
     border: 2.5px;
 }
 div#imagens img:hover{
     cursor: pointer;
 }
+
+/* S L I D E */
+
+div#slide{
+    display: none;
+    top: 10px;
+    left: 25%;
+    position: fixed;
+    background-color: rgb(255, 255, 255);
+    height: 50%;
+    width: 50%;
+} 
