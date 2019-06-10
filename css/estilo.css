@@ -122,3 +122,25 @@ div#slide a{
     padding: 5px;
     text-decoration: none;
 }
+
+/* C O N T A T O */
+
+form{
+    text-indent: 0; /*Cancela a identação usada na página Sobre*/
+    margin: 40px auto auto auto;
+    color: whitesmoke;
+}
+form input{
+    width: 300px;
+    margin: 5px 0;
+}
+form input:hover{
+    border: 1px solid orange;
+}
+form textarea{
+    margin-top: 5px;
+    width: 300px;
+}
+form textarea:hover{
+    border: 1px solid orange;
+}

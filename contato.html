@@ -25,33 +25,17 @@
         </nav>
     </header>
     <div id="principal">
-        <form method="POST" action="" >
-            Nome: <input type="text" name="nome" id="nome">
-            Email: <input type="email" name="email" id="email">
-        </form>
+        <section class="part1">
+            <form method="POST" action="" >
+                Nome: <br><input type="text" name="nome" id="nome"><br>
+                Email: <br><input type="email" name="email" id="email"><br>
+                Mensagem: <br><textarea name="msg" id="msg" cols="30" rows="10"></textarea>
+            </form>
+        </section>
     </div>
     <footer>
         <br><br>
         <span>&copy; Dualiri</span>
-        <script>
-            for(var i = 1; i <= 6; i++) {
-                document.querySelector(`#img${i}`).addEventListener('click', clique)
-            }
-
-            var slide = document.querySelector('#slide')
-            function clique(){
-                //document.querySelector('body').style.filter = 'brightness(50%)'
-                //slide.style.filter = "brightnees(100%)"
-                slide.style.display = "block"
-            }
-
-            document.querySelector('a#fechar').addEventListener('click', fechar)
-            function fechar(){
-                slide.style.display = "none"
-            }
-
-            console.log(`${window.innerWidth} e ${window.innerHeight}`)
-        </script>
     </footer>
 </body>
 </html>
