@@ -16,6 +16,7 @@ document.getElementById('btn').addEventListener('click', function(x){
     var nome = document.getElementById('nome').value
     var email = document.getElementById('email').value
     var desc = document.getElementById('msg').value
+    var dt = new Date
 
     var y = document.getElementsByClassName('alert')[1]
     var x = document.getElementsByClassName('alert')[0]
@@ -58,16 +59,16 @@ document.getElementById('btn').addEventListener('click', function(x){
             alert(key + "     " + childData)
             });
         });*/
-        dt = new Date
-        var entrada = {};
+        var entrada = {}
         entrada.nome = nome
         entrada.email = email
         entrada.data = dt.getDate() + "/" + dt.getMonth() + "/" + dt.getFullYear()
         entrada.mensagem = desc
 
         firebase.database().ref('dados').push(entrada).then(function(data){
-            //window.location.href = 'entry.html?id='+data.getKey()
+            window.location.href = 'contato.html'
             //caso queira que faça alguma ação
+            //window.location.href= 
         }).catch(function(error){
             alert(error)
             console.error(error)
