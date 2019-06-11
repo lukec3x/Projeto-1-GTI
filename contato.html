@@ -26,7 +26,7 @@
     </header>
     <div id="principal">
         <section class="part1">
-            <form method="" action="" >
+            <form method="" action="" autocomplete="on">
                 Nome:<span class="obrigatorio">*</span> <br><input type="text" name="nome" id="nome">
                 <span class="obrigatorio alert">Campo obrigatório!</span><br>
                 Email:<span class="obrigatorio">*</span><br><input type="email" name="email" id="email">
@@ -78,19 +78,49 @@
             }
             if (nome == "") {
                 x.style.display = 'block'
-            } else {
+            } else {/*
                 firebase.database().ref('dados/' + nome).set({
                     nome: nome,
                     email: email,
                     descricao: desc
-                })
+                })*/
 
-                nome.value = ""
-                email.value = ""
-                desc.value = ""
-                nome.innerText = ""
-                email.innerText = ""
-                desc.innerText = ""
+/////////////////////////////////////////////////////////////////////////////
+/*
+                var ref = firebase.database().ref("dados/");
+                ref.once("value")
+                .then(function(snapshot) {
+                    var a = snapshot.exists();  // true
+                    //var b = snapshot.child("name").exists(); // true
+                    var b = snapshot.child("lucas").exists(); // true
+                    var c = snapshot.child("name/first").exists(); // true
+                    var d = snapshot.child("name/middle").exists(); // false
+                    alert(a + " " + b + " " + c + " " + d)
+                });
+
+                var query = firebase.database().ref("dados").orderByKey();
+                query.once("value")
+                .then(function(snapshot) {
+                    snapshot.forEach(function(childSnapshot) {
+                    // key will be "ada" the first time and "alan" the second time
+                    var key = childSnapshot.key;
+                    // childData will be the actual contents of the child
+                    var childData = childSnapshot.val();
+                    alert(key + "     " + childData)
+                    });
+                });*/
+                var entrada = {};
+                entrada.nome = nome
+                entrada.email = email
+                entrada.mensagem = desc
+
+                firebase.database().ref('dados').push(entrada).then(function(data){
+                    //window.location.href = 'entry.html?id='+data.getKey()
+                    //caso queira que faça alguma ação
+                }).catch(function(error){
+                    alert(error)
+                    console.error(error)
+                })
             }
         })       
         </script>
