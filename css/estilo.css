@@ -130,6 +130,7 @@ span.obrigatorio{
 }
 span.alert{
     display: none;
+    float: right;
 }
 
 form{
@@ -138,8 +139,9 @@ form{
     color: whitesmoke;
 }
 form input{
-    width: 300px;
+    width: 298px;
     margin: 5px 0;
+    padding: 2px;
 }
 form input:hover{
     background-color: #cfd8dc;
