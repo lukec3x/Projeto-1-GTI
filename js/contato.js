@@ -62,16 +62,20 @@ document.getElementById('btn').addEventListener('click', function(x){
         var entrada = {}
         entrada.nome = nome
         entrada.email = email
-        entrada.data = dt.getDate() + "/" + dt.getMonth() + "/" + dt.getFullYear()
+        entrada.data = dt.getDate() + "/" + dt.getMonth() + "/" + dt.getFullYear() + " | " + 
+        dt.getHours() + ":" + dt.getMinutes()
         entrada.mensagem = desc
 
         firebase.database().ref('dados').push(entrada).then(function(data){
-            window.location.href = 'contato.html'
             //caso queira que faça alguma ação
-            //window.location.href= 
         }).catch(function(error){
             alert(error)
             console.error(error)
         })
+        document.getElementById('nome').value = ''
+        document.getElementById('email').value = ''
+        document.getElementById('msg').value = ''
+        //window.location.href = 'contato.html'
+        document.getElementById('confirm').style.display = 'block'
     }
 })       

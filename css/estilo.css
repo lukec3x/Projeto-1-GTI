@@ -164,3 +164,9 @@ form a#btn:hover{
     color: black;
     background-color: #c1d5e0;
 }
+
+form span#confirm{
+    display: none;
+    float: right;
+    color: #78909c;
+}
