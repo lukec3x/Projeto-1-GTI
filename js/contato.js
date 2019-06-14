@@ -22,6 +22,7 @@ document.getElementById('btn').addEventListener('click', function(x){
     var x = document.getElementsByClassName('alert')[0]
     x.style.display = 'none'
     y.style.display = 'none'
+    document.getElementById('confirm').style.display = 'none'
 
     if (email == "") {
         y.style.display = 'block'
@@ -59,6 +60,7 @@ document.getElementById('btn').addEventListener('click', function(x){
             alert(key + "     " + childData)
             });
         });*/
+        
         var entrada = {}
         entrada.nome = nome
         entrada.email = email
@@ -72,10 +74,12 @@ document.getElementById('btn').addEventListener('click', function(x){
             alert(error)
             console.error(error)
         })
-        document.getElementById('nome').value = ''
+        document.getElementById('nome').value = ''                                                                                                                   
         document.getElementById('email').value = ''
         document.getElementById('msg').value = ''
         //window.location.href = 'contato.html'
-        document.getElementById('confirm').style.display = 'block'
+        setTimeout(function(){
+            document.getElementById('confirm').style.display = 'block'
+        }, 500)
     }
 })       
