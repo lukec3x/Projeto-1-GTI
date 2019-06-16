@@ -170,3 +170,28 @@ form span#confirm{
     float: right;
     color: #78909c;
 }
+
+/* A D M I N */
+
+#tb{
+    display: block;
+    margin: 40px auto auto auto;
+}
+#tb tr td{
+    padding: 0 5px;
+}
+#tb input{
+    padding: 2px;
+    margin: 0;
+}
+#tb input:hover{
+    background-color: #cfd8dc;
+}
+#tb textarea{
+    padding: 2px;
+    width: 100%;
+    margin: 0;
+}
+#tb textarea:hover{
+    background-color: #cfd8dc;
+}

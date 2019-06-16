@@ -29,7 +29,8 @@ document.getElementById('btn').addEventListener('click', function(x){
     }
     if (nome == "") {
         x.style.display = 'block'
-    } else {/*
+    }
+    if (!(email == "" || nome == "")) {/*
         firebase.database().ref('dados/' + nome).set({
             nome: nome,
             email: email,
