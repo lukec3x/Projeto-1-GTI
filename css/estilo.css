@@ -175,21 +175,28 @@ form span#confirm{
 
 #tb{
     display: block;
-    margin: 40px auto auto auto;
 }
 #tb tr td{
     padding: 0 5px;
 }
 #tb input{
-    padding: 2px;
+    border: none;
+    padding: 4px;
     margin: 0;
+}
+#tb input[type=text]{
+    width: 200px;
 }
 #tb input:hover{
     background-color: #cfd8dc;
 }
 #tb textarea{
-    padding: 2px;
-    width: 100%;
+    border: none;
+    padding: 4px;
+    min-width: 300px;
+    width: 300px;
+    min-height: 15px;
+    height: 15px;
     margin: 0;
 }
 #tb textarea:hover{

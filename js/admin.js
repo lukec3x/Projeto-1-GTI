@@ -10,29 +10,28 @@ var firebaseConfig = {
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-//var db = firebase.database(); não tou utilizando
+//var db = firebase.databaseooo(); não tou utilizando
 
 var tb = document.getElementById('tb')
 var tbs = tb.style
-tb.innerHTML = `
-<table>
-    <tr class='tr'>
-        <td>Nome</td>
-        <td>Email</td>
-        <td>Mensagem</td>
-    </tr>
-    <tr class='tr'>
-        <td><input readonly="readonly" value="salknfasklfna" type="text"></td>
-        <td><input readonly="readonly" value="salknfasklfnasnfakfl" type="text"></td>
-        <td><textarea row="2" readonly="readonly">Lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor lorem ipsum dolor </textarea></td>
-    </tr>
-    <tr class='tr'>
-        <td>4</td>
-        <td>5</td>
-        <td>6</td>
-    </tr>
-</table>
-`
+var query = firebase.database().ref("dados").orderByKey();
+query.once("value").then(function(snapshot) {
+    var s = `<tr class="tr"><td><span>Nome</span></td><td><span>Email</span></td><td><span>Mensagem</span></td></tr>`
+    snapshot.forEach(function(childSnapshot) {
+        // Valor da chave
+        var key = childSnapshot.key
+        var childData = childSnapshot.val()
+        s += "<tr class=\"tr\">" + 
+                "<td><input readonly=\"readonly\" value=\"" + childData.nome + "\" type=\"text\"></td>" + 
+                "<td><input readonly=\"readonly\" value=\"" + childData.email + "\" type=\"email\"></td>" +
+                "<td><textarea row=\"1\" readonly=\"readonly\">" + childData.mensagem + "</textarea></td>" +
+            "</tr>"
+    })
+
+    //alert(s)
+    tb.innerHTML = "<table>" + s + "</table>"
+})
+/*
 var query = firebase.database().ref("dados").orderByKey();
 query.once("value")
     .then(function(snapshot) {
@@ -41,11 +40,32 @@ query.once("value")
         var key = childSnapshot.key;
         // childData will be the actual contents of the child
         var childData = childSnapshot.val();
-        alert(key + "     " + childData.nome + "    " + childSnapshot)
+        alert(key + "     " + childData.nome + "    " + childData.email + "    " + childData.mensagem + "     " +childData.data)
     });
 });
-
+*/
  /* STYLE */
 tbs.color = 'white'
 tbs.width = '75%'
 tbs.margin = '0 auto'
+
+var tpl = [
+    '<div class="popover clockpicker-popover">',
+        '<div class="arrow"></div>',
+        '<div class="popover-title">',
+            '<span class="clockpicker-span-hours text-primary"></span>',
+            ' : ',
+            '<span class="clockpicker-span-minutes"></span>',
+            '<span class="clockpicker-span-am-pm"></span>',
+        '</div>',
+        '<div class="popover-content">',
+            '<div class="clockpicker-plate">',
+                '<div class="clockpicker-canvas"></div>',
+                '<div class="clockpicker-dial clockpicker-hours"></div>',
+                '<div class="clockpicker-dial clockpicker-minutes clockpicker-dial-out"></div>',
+            '</div>',
+            '<span class="clockpicker-am-pm-block">',
+            '</span>',
+        '</div>',
+    '</div>'
+].join('');
