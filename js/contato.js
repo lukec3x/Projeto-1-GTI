@@ -1,4 +1,3 @@
-// Your web app's Firebase configuration
 var firebaseConfig = {
     apiKey: "AIzaSyCZm_55Cl2DFror0efHEmyRRaJWblUDRk4",
     authDomain: "portifolio-a74bc.firebaseapp.com",
@@ -8,9 +7,8 @@ var firebaseConfig = {
     messagingSenderId: "889584705371",
     appId: "1:889584705371:web:f167dc230a4da877"
 };
-// Initialize Firebase
+
 firebase.initializeApp(firebaseConfig);
-//var db = firebase.database(); não tou utilizando
 
 document.getElementById('btn').addEventListener('click', function(x){
     var nome = document.getElementById('nome').value

@@ -105,24 +105,6 @@ div#imagens img:hover{
     cursor: pointer;
 }
 
-/* S L I D E */
-
-div#slide{
-    display: none;
-    top: 10px;
-    left: 25%;
-    position: fixed;
-    background-color: rgb(255, 255, 255);
-    height: 50px;
-    width: 50px;
-}
-div#slide a{
-    display: block;
-    text-align: right;
-    padding: 5px;
-    text-decoration: none;
-}
-
 /* C O N T A T O */
 
 span.obrigatorio{
@@ -175,6 +157,9 @@ form span#confirm{
 
 #tb{
     display: block;
+    color: white;
+    width: 75%;
+    margin: 0 auto;
 }
 #tb tr td{
     padding: 0 5px;
@@ -201,4 +186,15 @@ form span#confirm{
 }
 #tb textarea:hover{
     background-color: #cfd8dc;
+}
+
+.deslogar{
+    float: right;
+    color: #c1d5e0;
+}
+
+/* L O G I N */
+
+div#firebaseui-auth-container div.mdl-card{
+    filter: brightness(80%);
 }

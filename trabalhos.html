@@ -5,6 +5,7 @@
     <title>Rodrigo Davi</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="icon" href="img/icon.png">
 </head>
 <body>
@@ -26,53 +27,30 @@
     </header>
     <div id="principal">
         <div id="imagens">
-            <img id="img1" src="img/img_trabalhos_001.jpg" alt="">
-            <img id="img2" src="img/img_trabalhos_002.jpg" alt="">
-            <img id="img3" src="img/img_trabalhos_003.jpg" alt="">
-            <img id="img4" src="img/noimage.png" alt="">
-            <img id="img5" src="img/noimage.png" alt="">
-            <img id="img6" src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
-            <img src="img/noimage.png" alt="">
+            <a data-lightbox="imgs" href="images/img_trabalhos_001.jpg" alt="">
+                <img src="images/img_trabalhos_001.jpg" alt="">
+            </a>
+            <a data-lightbox="imgs" href="images/img_trabalhos_002.jpg" alt="">
+                <img src="images/img_trabalhos_002.jpg" alt="">
+            </a>
+            <a data-lightbox="imgs" href="images/img_trabalhos_003.jpg" alt="">
+                <img src="images/img_trabalhos_003.jpg" alt="">
+            </a>
+            <a data-lightbox="imgs" href="images/noimage.png" alt="">
+                <img src="images/noimage.png" alt="">
+            </a>
+            <a data-lightbox="imgs" href="images/noimage.png" alt="">
+                <img src="images/noimage.png" alt="">
+            </a>
+            <a data-lightbox="imgs" href="images/noimage.png" alt="">
+                <img src="images/noimage.png" alt="">
+            </a>
         </div>
     </div>
     <footer>
         <br><br>
         <span>&copy; Dualiri</span>
-        <script>
-            for(var i = 1; i <= 6; i++) {
-                document.querySelector(`#img${i}`).addEventListener('click', clique)
-            }
-
-            var slide = document.querySelector('#slide')
-            function clique(){
-                //document.querySelector('body').style.filter = 'brightness(50%)'
-                //slide.style.filter = "brightnees(100%)"
-                slide.style.display = "block"
-            }
-
-            document.querySelector('a#fechar').addEventListener('click', fechar)
-            function fechar(){
-                slide.style.display = "none"
-            }
-
-            console.log(`${window.innerWidth} e ${window.innerHeight}`)
-        </script>
+        <script src="js/lightbox-plus-jquery.js"></script>
     </footer>
 </body>
 </html>
