@@ -5,14 +5,9 @@
     <title>Rodrigo Davi</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/lightbox.css">
     <link rel="icon" href="img/icon.png">
 </head>
 <body>
-    <div id="slide">
-        <a id="fechar" href="">X</a>
-        <img src="" alt="">
-    </div>
     <header>
         <div id="logo">
             <a href="index.html">
@@ -26,23 +21,30 @@
         </nav>
     </header>
     <div id="principal">
+        <div id="light" class="conteudo">
+            <a href="javascript:void(0)" onclick="fechar();">X</a>
+        </div>
+        <div id="fade" class="overlay">
+            <!--Cria o efeito no fundo-->
+        </div>
+
         <div id="imagens">
-            <a data-lightbox="imgs" href="images/img_trabalhos_001.jpg" alt="">
+            <a href="javascript:void(0)" onclick="abrir()" alt="">
                 <img src="images/img_trabalhos_001.jpg" alt="">
             </a>
-            <a data-lightbox="imgs" href="images/img_trabalhos_002.jpg" alt="">
+            <a href="javascript:void(0)" onclick="abrir()" alt="">
                 <img src="images/img_trabalhos_002.jpg" alt="">
             </a>
-            <a data-lightbox="imgs" href="images/img_trabalhos_003.jpg" alt="">
+            <a href="javascript:void(0)" onclick="abrir()" alt="">
                 <img src="images/img_trabalhos_003.jpg" alt="">
             </a>
-            <a data-lightbox="imgs" href="images/noimage.png" alt="">
+            <a href="javascript:void(0)" onclick="abrir()" alt="">
                 <img src="images/noimage.png" alt="">
             </a>
-            <a data-lightbox="imgs" href="images/noimage.png" alt="">
+            <a href="javascript:void(0)" onclick="abrir()" alt="">
                 <img src="images/noimage.png" alt="">
             </a>
-            <a data-lightbox="imgs" href="images/noimage.png" alt="">
+            <a href="javascript:void(0)" onclick="abrir()" alt="">
                 <img src="images/noimage.png" alt="">
             </a>
         </div>
@@ -50,7 +52,7 @@
     <footer>
         <br><br>
         <span>&copy; Dualiri</span>
-        <script src="js/lightbox-plus-jquery.js"></script>
+        <script src="js/trabalhos.js"></script>
     </footer>
 </body>
 </html>

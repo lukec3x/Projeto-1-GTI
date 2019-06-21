@@ -105,6 +105,40 @@ div#imagens img:hover{
     cursor: pointer;
 }
 
+div.overlay{
+    display: none;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: 1001;
+    -moz-opacity: 0.8;
+    opacity: .80;
+    filter: alpha(opacity=80);
+}
+
+div.conteudo{
+    display: none;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    width: 50%;
+    height: 50%;
+    padding: 16px;
+    border: 16px solid #C5D1E2;
+    background-color: white;
+    z-index: 1002;
+    overflow: auto;
+}
+div.conteudo a{
+    text-decoration: none;
+    color: #313233;
+    float: right;
+    size: 25pt;
+}
+
 /* C O N T A T O */
 
 span.obrigatorio{
