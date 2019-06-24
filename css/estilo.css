@@ -122,10 +122,9 @@ div.overlay{
 div.conteudo{
     display: none;
     position: fixed;
-    top: 5%;
-    left: 8%;
-    width: 80%;
-    height: 80%;
+    top: 3%;
+    width: auto;
+    height: auto;
     /*padding: 16px;*/
     border: 5px solid #C5D1E2;
     background-color: white;
@@ -139,14 +138,8 @@ div.conteudo a{
     float: right;
     size: 25pt;
 }
-#img{
-    width: auto;
-    height: auto;
-}
 div.conteudo img{
-    position: absolute;
-    width: 100%;
-    height: auto;
+    width:auto;
 }
 div.overlay a{
     float: right;
