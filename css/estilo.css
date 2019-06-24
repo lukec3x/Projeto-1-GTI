@@ -107,7 +107,7 @@ div#imagens img:hover{
 
 div.overlay{
     display: none;
-    position: absolute;
+    position: fixed;
     top: 0%;
     left: 0%;
     width: 100%;
@@ -121,13 +121,13 @@ div.overlay{
 
 div.conteudo{
     display: none;
-    position: absolute;
-    top: 25%;
-    left: 25%;
-    width: 50%;
-    height: 50%;
-    padding: 16px;
-    border: 16px solid #C5D1E2;
+    position: fixed;
+    top: 5%;
+    left: 8%;
+    width: 80%;
+    height: 80%;
+    /*padding: 16px;*/
+    border: 5px solid #C5D1E2;
     background-color: white;
     z-index: 1002;
     overflow: auto;
@@ -135,8 +135,22 @@ div.conteudo{
 div.conteudo a{
     text-decoration: none;
     color: #313233;
+    background-color: #fff;
     float: right;
     size: 25pt;
+}
+#img{
+    width: auto;
+    height: auto;
+}
+div.conteudo img{
+    position: absolute;
+    width: 100%;
+    height: auto;
+}
+div.overlay a{
+    float: right;
+    margin: 7px;
 }
 
 /* C O N T A T O */
