@@ -2,6 +2,9 @@ body{
     background-color: #000;
     font-family: 'Raleway', sans-serif;
 }
+a{
+    text-decoration: none;
+}
 a:hover{
     cursor: pointer;
 }
@@ -98,7 +101,7 @@ div#imagens{
 }
 div#imagens img{
     /*float: left; -- Não pretendo ativar, por enquanto -- */
-    width: 330px;
+    height: 330px;
     border: 2.5px;
 }
 div#imagens img:hover{
@@ -136,7 +139,6 @@ div.conteudo{
     overflow: auto;
 }
 div.conteudo a{
-    text-decoration: none;
     color: #313233;
     background-color: #fff;
     float: right;
