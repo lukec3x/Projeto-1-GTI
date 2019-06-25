@@ -5,7 +5,9 @@ function abrir(n) {
     
 
     var w = window.screen.width
-    var h = document.body.clientHeight //window.screen.height
+    var h = window.screen.height //document.body.clientHeight
+    //window.screen.height | Pega o tamanho da tela 
+    //document.body.clientHeight | Pega o tamanho do conteudo na tela
     
     console.log(w, h, (h * 71 / 100))
     console.log((screen.width - document.body.clientWidth)/2)

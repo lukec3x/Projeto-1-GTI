@@ -105,7 +105,7 @@ div#imagens img:hover{
     cursor: pointer;
 }
 
-div.overlay{
+div.fundo{
     display: none;
     position: fixed;
     top: 0%;
@@ -117,6 +117,10 @@ div.overlay{
     -moz-opacity: 0.8;
     opacity: .80;
     filter: alpha(opacity=80);
+}
+div.fundo a{
+    float: right;
+    margin: 7px;
 }
 
 div.conteudo{
@@ -140,10 +144,6 @@ div.conteudo a{
 }
 div.conteudo img{
     width:auto;
-}
-div.overlay a{
-    float: right;
-    margin: 7px;
 }
 
 /* C O N T A T O */
