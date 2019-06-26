@@ -18,7 +18,7 @@ firebase.auth().onAuthStateChanged(function (user) {
             var tbs = tb.style
             var query = firebase.database().ref("dados").orderByKey();
             query.once("value").then(function(snapshot) {
-                var s = `<tr class="tr"><td><span>Nome</span></td><td><span>Email</span></td><td><span>Mensagem</span></td></tr>`
+                var s = `<tr class="tr"><td class='titulo'><span>Nome</span></td><td class='titulo'><span>Email</span></td><td class='titulo'><span>Mensagem</span></td></tr>`
                 snapshot.forEach(function(childSnapshot) {
                     // Valor da chave
                     var key = childSnapshot.key

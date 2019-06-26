@@ -207,6 +207,7 @@ form span#confirm{
 }
 #tb tr td{
     padding: 0 5px;
+    background:white;
 }
 #tb input{
     border: none;
@@ -216,9 +217,6 @@ form span#confirm{
 #tb input[type=text]{
     width: 200px;
 }
-#tb input:hover{
-    background-color: #cfd8dc;
-}
 #tb textarea{
     border: none;
     padding: 4px;
@@ -227,12 +225,22 @@ form span#confirm{
     min-height: 15px;
     height: 15px;
     margin: 0;
+    line-height: 18px;
 }
-#tb textarea:hover{
+#tb tr td:hover input{
     background-color: #cfd8dc;
 }
+#tb tr td:hover{
+    background-color: #cfd8dc;
+}
+#tb tr td:hover textarea{
+    background-color: #cfd8dc;
+}
+#tb tr td.titulo{
+    background-color: black;
+}
 
-.deslogar{
+nav a.deslogar{
     float: right;
     color: #c1d5e0;
 }

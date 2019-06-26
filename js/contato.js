@@ -28,14 +28,8 @@ document.getElementById('btn').addEventListener('click', function(x){
     if (nome == "") {
         x.style.display = 'block'
     }
-    if (!(email == "" || nome == "")) {/*
-        firebase.database().ref('dados/' + nome).set({
-            nome: nome,
-            email: email,
-            descricao: desc
-        })*/
-
-/////////////////////////////////////////////////////////////////////////////
+    if (!(email == "" || nome == "")) {
+    /////////////////////////////////////////////////////////////////////////
 /*
         var ref = firebase.database().ref("dados/");
         ref.once("value")
