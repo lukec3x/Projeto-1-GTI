@@ -220,11 +220,15 @@ form span#confirm{
 #tb textarea{
     border: none;
     padding: 4px;
-    min-width: 300px;
+    margin: 0;
+
+    max-width: 500px;
     width: 500px;
+    min-width: 500px;
+
     min-height: 15px;
     height: 15px;
-    margin: 0;
+    
     line-height: 18px;
 }
 #tb tr td:hover input{
