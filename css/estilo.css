@@ -202,7 +202,7 @@ form span#confirm{
 #tb{
     display: block;
     color: white;
-    width: 75%;
+    width: 71%;
     margin: 0 auto;
 }
 #tb tr td{
@@ -221,7 +221,7 @@ form span#confirm{
     border: none;
     padding: 4px;
     min-width: 300px;
-    width: 300px;
+    width: 500px;
     min-height: 15px;
     height: 15px;
     margin: 0;
