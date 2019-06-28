@@ -59,7 +59,7 @@ footer span:hover{
 /*S O B R E*/
 
 section.part1, section.part2{
-    text-indent: 35px;
+    /*text-indent: 35px;*/
     width: 50%;
     float: left;
 }
@@ -68,8 +68,7 @@ section.part1 h3{
     margin: 20px 0;
 }
 section.part1 p{
-    text-align: justify;
-    float: right;
+    float: left;
     color: white;
     margin: 0 30px auto auto;
 }
@@ -159,6 +158,12 @@ span.alert{
     float: right;
 }
 
+section.part3{
+    margin: 0 auto;
+    padding: 0 auto;
+    width: 30%;
+}
+
 form{
     text-indent: 0; /*Cancela a identação usada na página Sobre*/
     margin: 40px auto auto auto;
@@ -183,7 +188,6 @@ form a#btn{
     width: 100px;
     border: 1px solid #c1d5e0;
     color: #c1d5e0;
-    text-decoration: none;
     padding: 5px;
 }
 form a#btn:hover{
@@ -253,4 +257,15 @@ nav a.deslogar{
 
 div#firebaseui-auth-container div.mdl-card{
     filter: brightness(80%);
+}
+
+div#pesq{
+    float: right;
+    margin-right: 30px; 
+}
+div#pesq a{
+    width: 100px;
+    border: 1px solid #c1d5e0;
+    color: #c1d5e0;
+    padding: 5px;
 }

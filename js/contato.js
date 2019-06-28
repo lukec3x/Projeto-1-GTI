@@ -43,7 +43,7 @@ document.getElementById('btn').addEventListener('click', function(x){
         });*/
         
         var entrada = {}
-        entrada.nome = nome.toUpperCase()
+        entrada.nome = nome
         entrada.email = email
         entrada.data = dt.getDate() + "/" + dt.getMonth() + "/" + dt.getFullYear() + " | " + 
         dt.getHours() + ":" + dt.getMinutes()

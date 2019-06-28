@@ -10,11 +10,12 @@ var firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
+var tb = document.getElementById('tb')
+
 firebase.auth().onAuthStateChanged(function (user) {
     if (user) {
         if (user.uid == 'EkRvCmLZSRde5HYHl50IQSlgQ0I2') {
             //alert('Logado')
-            var tb = document.getElementById('tb')
             var tbs = tb.style
             var query = firebase.database().ref("dados").orderByKey();
             query.once("value").then(function(snapshot) {
@@ -24,10 +25,10 @@ firebase.auth().onAuthStateChanged(function (user) {
                     var key = childSnapshot.key
                     var childData = childSnapshot.val()
                     s += "<tr class=\"tr\">" + 
-                            "<td><input readonly=\"readonly\" value=\"" + childData.nome + "\" type=\"text\"></td>" + 
-                            "<td><input readonly=\"readonly\" value=\"" + childData.email + "\" type=\"email\"></td>" +
-                            "<td><textarea row=\"1\" readonly=\"readonly\">" + childData.mensagem + "</textarea></td>" +
-                        "</tr>"
+                    "<td><input readonly=\"readonly\" value=\"" + childData.nome + "\" type=\"text\"></td>" + 
+                    "<td><input readonly=\"readonly\" value=\"" + childData.email + "\" type=\"email\"></td>" +
+                    "<td><textarea row=\"1\" readonly=\"readonly\">" + childData.mensagem + "</textarea></td>" +
+                    "</tr>"
                 })
             
                 //alert(s)
@@ -49,4 +50,35 @@ function clk() {
     }).catch(function(error) {
     // An error happened.
     });
+}
+
+function busca(){
+    var camp = document.getElementById('camp').value.toUpperCase()
+    //console.log(camp)
+    if (!(camp == '')){
+        var query = firebase.database().ref("dados").orderByKey();
+        query.once("value").then(function(snapshot) {
+            var s = `<tr class="tr"><td class='titulo'><span>Nome</span></td><td class='titulo'><span>Email</span></td><td class='titulo'><span>Mensagem</span></td></tr>`
+            var x = ''
+            snapshot.forEach(function(childSnapshot) {
+                var key = childSnapshot.key
+                var db = childSnapshot.val()
+                
+                if(camp == db.nome.toUpperCase() || camp == db.email.toUpperCase() || camp == db.mensagem.toUpperCase()){
+                    //console.log(key + " " + db.nome.toUpperCase())
+                    
+                    s += "<tr class=\"tr\">" + 
+                    "<td><input readonly=\"readonly\" value=\"" + db.nome + "\" type=\"text\"></td>" + 
+                    "<td><input readonly=\"readonly\" value=\"" + db.email + "\" type=\"email\"></td>" +
+                    "<td><textarea row=\"1\" readonly=\"readonly\">" + db.mensagem + "</textarea></td>" +
+                    "</tr>"
+    
+                }
+            })
+            if(s == `<tr class="tr"><td class='titulo'><span>Nome</span></td><td class='titulo'><span>Email</span></td><td class='titulo'><span>Mensagem</span></td></tr>`){
+                s = '<p>Não Encontrado!</p>'
+            }
+            tb.innerHTML = "<table>" + s + "</table>"
+        })
+    }
 }
