@@ -54,12 +54,11 @@ function clk() {
 
 function busca(){
     var camp = document.getElementById('camp').value.toUpperCase()
-    //console.log(camp)
+    console.log(camp)
     if (!(camp == '')){
         var query = firebase.database().ref("dados").orderByKey();
         query.once("value").then(function(snapshot) {
             var s = `<tr class="tr"><td class='titulo'><span>Nome</span></td><td class='titulo'><span>Email</span></td><td class='titulo'><span>Mensagem</span></td></tr>`
-            var x = ''
             snapshot.forEach(function(childSnapshot) {
                 var key = childSnapshot.key
                 var db = childSnapshot.val()

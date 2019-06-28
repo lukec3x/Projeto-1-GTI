@@ -223,7 +223,7 @@ form span#confirm{
 }
 #tb textarea{
     border: none;
-    padding: 4px;
+    padding: 4px 6px 4px 4px;
     margin: 0;
 
     max-width: 500px;
@@ -234,6 +234,7 @@ form span#confirm{
     height: 15px;
     
     line-height: 18px;
+    text-align: justify;
 }
 #tb tr td:hover input{
     background-color: #cfd8dc;
@@ -261,7 +262,7 @@ div#firebaseui-auth-container div.mdl-card{
 
 div#pesq{
     float: right;
-    margin-right: 30px; 
+    margin: 0 30px 10px 0; 
 }
 div#pesq a{
     width: 100px;
