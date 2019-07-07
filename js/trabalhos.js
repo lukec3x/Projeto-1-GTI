@@ -26,7 +26,6 @@ function abrir(n) {
 
     //Centraliza o slide
     document.getElementById('light').style.left = ((document.body.clientWidth /2) - (document.getElementById('i').width) /2) + 'px'
-    document.getElementById('light').style.top = ((h /2) - (document.getElementById('i').height) /2) + 'px'
 }
 
 function fechar() {
