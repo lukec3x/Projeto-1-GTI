@@ -27,7 +27,7 @@ function abrir(n) {
     // Pega o valor equivalente a 71% do tamanho da tela
     var larguraImg = (h * 71 / 100) + 'px'
     document.querySelector('img').style.height = larguraImg
-    //document.querySelector('img').style.width = 'auto'
+    //document.querySelector('img').style.width = (w * 71 /100) + 'px'
 
     // Adiciona oas botões de navegação na imagem
     document.getElementById('light').innerHTML += "<div id='esq' style='top: 0; width: 10%; height: " +
@@ -48,7 +48,6 @@ function abrir(n) {
     //Centralizar os botões de passar e voltar
     document.getElementById('prox').style.position = 'relative'
     document.getElementById('ant').style.position = 'relative'
-
     var x = ((document.getElementById('i').height /2) - (45 /2)) + 'px'
     document.getElementById('prox').style.top = x
     document.getElementById('ant').style.top = x
