@@ -98,9 +98,14 @@ section.part2 img{
 
 div#imagens{
     margin: 40px auto auto auto;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-content: flex-start;
 }
 div#imagens img{
-    /*float: left; -- Não pretendo ativar, por enquanto -- */
     height: 330px;
     border: 2.5px;
 }
