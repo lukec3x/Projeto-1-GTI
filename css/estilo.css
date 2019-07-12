@@ -35,7 +35,7 @@ nav #selecionado{
     color: #c1d5e0;
 }
 
-main{
+#principal{
     /*width: 960px;*/
     width: 75%;
     margin: auto;
@@ -214,9 +214,9 @@ form span#confirm{
 
 #tb{
     display: block;
-    color: white;
     width: 71%;
     margin: 0 auto;
+    color: white;
     border-collapse: collapse;
 }
 #tb th{
