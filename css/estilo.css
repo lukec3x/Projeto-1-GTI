@@ -35,7 +35,7 @@ nav #selecionado{
     color: #c1d5e0;
 }
 
-#principal{
+main{
     /*width: 960px;*/
     width: 75%;
     margin: auto;
@@ -217,10 +217,22 @@ form span#confirm{
     color: white;
     width: 71%;
     margin: 0 auto;
+    border-collapse: collapse;
+}
+#tb th{
+    background-color: black;
+    text-align: left;
+    margin-left: 15px;
+    padding-bottom: 5px;
+    font-weight: 500;
+}
+#tb tbody{
+    border: 1px solid #666;
 }
 #tb tr td{
-    padding: 0 5px;
+    padding: 0 2.5px;
     background:white;
+    border-bottom: 1px solid #666;
 }
 #tb input{
     border: none;
@@ -245,17 +257,14 @@ form span#confirm{
     line-height: 18px;
     text-align: justify;
 }
-#tb tr td:hover input{
+#tb tr:hover input{
     background-color: #cfd8dc;
 }
-#tb tr td:hover{
+#tb tr:hover td{
     background-color: #cfd8dc;
 }
-#tb tr td:hover textarea{
+#tb tr:hover textarea{
     background-color: #cfd8dc;
-}
-#tb tr td.titulo{
-    background-color: black;
 }
 
 nav a.deslogar{
